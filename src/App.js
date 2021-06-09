@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import {Stack} from '@fluentui/react/lib/Stack';
+import Addtodo from "./Addtodo";
+import {Depths} from '@fluentui/theme';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="app">
+            <Stack horizontalAlign="center">
+                <Stack.Item style={{boxShadow: Depths.depth8, padding: 20, margin: '25px 0 0'}}>
+                    <Addtodo/>
+                </Stack.Item>
+            </Stack>
+        </div>
+    );
 }
 
 export default App;
